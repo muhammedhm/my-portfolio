@@ -1,0 +1,19 @@
+{
+  "name": "hasan-misba-portfolio",
+  "version": "1.0.0",
+  "description": "Professional AI/ML Engineer Portfolio for Muhammed Hasan Misba",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "ai-engineer",
+    "machine-learning",
+    "agentic-ai",
+    "rag"
+  ],
+  "author": "Muhammed Hasan Misba",
+  "license": "MIT"
+}
