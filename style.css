@@ -1477,3 +1477,9 @@ html.light .moon-icon { display: block; }
     font-size: 0.725rem;
   }
 }
+
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
