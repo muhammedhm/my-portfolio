@@ -999,16 +999,18 @@ html.light .moon-icon { display: block; }
 
 .terminal-header {
   background: #111827;
-  padding: 10px 16px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
+  gap: 8px;
 }
 
 .terminal-buttons {
   display: flex;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .btn-dot {
@@ -1024,6 +1026,12 @@ html.light .moon-icon { display: block; }
   font-size: 0.75rem;
   color: #94a3b8;
   margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  flex-grow: 1;
+  min-width: 0;
 }
 
 .terminal-body {
@@ -1046,8 +1054,9 @@ html.light .moon-icon { display: block; }
 
 .terminal-quick-chips {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 10px 14px;
   background: #0d1322;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -1056,12 +1065,13 @@ html.light .moon-icon { display: block; }
   background: var(--bg-tag);
   border: 1px solid var(--border-color);
   color: var(--accent-cyan);
-  padding: 4px 10px;
-  border-radius: 4px;
+  padding: 5px 12px;
+  border-radius: 6px;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.775rem;
   cursor: pointer;
   transition: var(--transition-smooth);
+  flex-shrink: 0;
 }
 .chip-btn:hover {
   background: var(--accent-cyan);
@@ -1071,20 +1081,23 @@ html.light .moon-icon { display: block; }
 .terminal-input-row {
   display: flex;
   align-items: center;
-  padding: 10px 16px;
+  padding: 10px 14px;
   background: #0b0f19;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 8px;
 }
 
 .prompt-symbol {
   color: var(--accent-emerald);
   font-weight: 600;
-  margin-right: 10px;
   font-size: 0.85rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 #terminal-input {
   flex-grow: 1;
+  min-width: 0;
   background: transparent;
   border: none;
   outline: none;
@@ -1097,12 +1110,18 @@ html.light .moon-icon { display: block; }
   background: var(--accent-cyan);
   color: #0b0f19;
   border: none;
-  padding: 4px 12px;
-  border-radius: 4px;
+  padding: 6px 14px;
+  border-radius: 6px;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.775rem;
   font-weight: 600;
   cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+.terminal-send-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 /* --------------------------------------------------------------------------
@@ -1413,5 +1432,48 @@ html.light .moon-icon { display: block; }
 
   .lead-text {
     font-size: 1.05rem;
+  }
+
+  /* Mobile Terminal Tweaks */
+  .terminal-header {
+    padding: 8px 12px;
+  }
+
+  .terminal-title {
+    font-size: 0.7rem;
+  }
+
+  .terminal-body {
+    padding: 1rem;
+    height: 220px;
+    font-size: 0.8rem;
+  }
+
+  .terminal-quick-chips {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .chip-btn {
+    padding: 4px 8px;
+    font-size: 0.725rem;
+  }
+
+  .terminal-input-row {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .prompt-symbol {
+    font-size: 0.775rem;
+  }
+
+  #terminal-input {
+    font-size: 0.775rem;
+  }
+
+  .terminal-send-btn {
+    padding: 5px 10px;
+    font-size: 0.725rem;
   }
 }
